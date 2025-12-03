@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Header } from "./components/header"
+import { Tittle } from "./components/tittle"
+import { Seccion1 } from "./components/seccion1"
+import { Seccion2 } from "./components/seccion2"
+import {Footer} from "./components/footer"
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <section className="bg-[url(src/assets/images/image-hero.jpg)] bg-cover h-[600px] w-[100%]">
+        <Header />
+        <Tittle />
+      </section>
+      <section>
+        <Seccion1 />
+        <Seccion2 />
+      </section>
+      <section>
+        <Footer />
+      </section>
+    </div>
   )
 }
 
 export default App
+
